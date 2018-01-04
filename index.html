@@ -27,34 +27,22 @@
 <body>
 <script src="lib/jquery-2.1.4.min.js"></script>
 <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+
 <script src="lib/share-behavior.js"></script>
 
-
-<script type="text/javascript">
-    //    start animation when scroll (need to add class with animation when an object in viewport)
-    $(window).scroll(function () {
-        var elems = document.querySelectorAll(".one"),
-            i;
-
-        var top_of_element = $("#headers").offset().top; //top of the need elem on scroll
-        var bottom_of_element = $("#headers").offset().top + $("#headers").outerHeight();
-        var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
-        var top_of_screen = $(window).scrollTop();
+<script src="js/animation-on-scroll.js"></script>
 
 
-        for (i = 0; i < elems.length; ++i) {
-            if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
-                elems[i].className = elems[i].setAttribute('class', 'one logo');
-            } else {
-                elems[i].className = elems[i].setAttribute('class', 'one hidden');
-            }
-        }
 
-    });
-</script>
+<div id="particles-js"></div>
+<script src="lib/particles.js" type="text/javascript"></script>
+<script src="lib/app.js" type="text/javascript"></script>
+
+<div id="overlay">
 
 
 <section>
+    <div class="col-md-offset-3 col-md-6">
     <svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 400">
         <g>
             <path class="logo" fill="transparent" d="M20.695,31.486h107.578v28.281H92.18v86.25H56.789v-86.25H20.695
@@ -149,10 +137,11 @@
 		l5.544,8.712h-4.248l-3.216-5.112l-0.721-1.728l-0.695,1.728l-3.217,5.112h-3.863L562.631,215.438z"/>
         </g>
     </svg>
+    </div>
 </section>
 
 
-<section style="background-color:#e5e5e5">
+<section id="first" style="background-color: transparent">
     <div class="animation-element slide-left testimonial">
     <div class="row">
     <div class="col-md-offset-3 col-md-4">
@@ -250,7 +239,7 @@
     </div>
 </section>
 <!--testimonial three -->
-<section style="background-color:#e5e5e5">
+<section style="background-color:transparent">
     <div class="col-md-offset-3 col-md-6">
         <div class="animation-element slide-left testimonial">
             <h2>Пріоритетні теми:</h2>
@@ -279,7 +268,7 @@
     </div>
 </section>
 
-<section style="background-color:#e5e5e5">
+<section style="background-color:transparent">
     <div class="col-md-offset-3 col-md-6">
     <div class="animation-element slide-left testimonial">
         <h2>Команда</h2>
@@ -312,7 +301,7 @@
     </div>
 </section>
 
-<section style="background-color:#e5e5e5">
+<section style="background-color:transparent">
     <div class="col-md-offset-3 col-md-6">
     <div class="animation-element slide-left testimonial">
         <h2>Аналітика</h2>
@@ -321,7 +310,7 @@
     </div>
 </section>
 
-
+</div>
 <script>
     var $animation_elements = $('.animation-element');
     var $window = $(window);

@@ -291,6 +291,18 @@ p, li {
       fill: none;
       stroke: none; }
 
+#particles-js {
+  background-color: #e5e5e5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0; }
+
+#overlay {
+  position: relative; }
+
 /* ----------------------
       animation
  ------------------------ */
@@ -321,10 +333,11 @@ p, li {
   65% {
     opacity: 1; } }
 .anim {
+  position: absolute;
   display: block;
   margin: 25vh auto 0;
   /*height: 100vh;*/
-  width: 50%; }
+  width: 100%; }
 
 .logo {
   stroke: #3A3F4A;
