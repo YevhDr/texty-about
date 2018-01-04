@@ -26,61 +26,40 @@
       animation
  ------------------------ */
 @keyframes offset {
-  100% {
-    stroke-dashoffset: 0;
-  }
+  100% {  stroke-dashoffset: 0;  }
 }
 
 @keyframes fill-it {
-  100% {
-    stroke-width: 0;
-    fill: #515661;
-  }
+  100% {  stroke-width: 0;   fill: #515661;  }
 }
 
 @keyframes fill-it-h2 {
-  100% {
-    stroke-width: 0;
-    fill: #FAA61A;
-  }
+  100% {   stroke-width: 0;    fill: #FAA61A;  }
 }
 
 @keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-
-  }
+  0% {    opacity: 0;  }
+  100% {    opacity: 1;  }
 }
 
 @keyframes brain {
-  25% {
-    opacity: 1;
-    stroke: grey;
-    fill:grey;
-  }
-
-  75% {
-    opacity: 1;
-    stroke: #FAA61A;
-    fill: #FAA61A;
-  }
+  25% { opacity: 1;  stroke: grey;  fill:grey;  }
+  75% { opacity: 1;  stroke: #FAA61A; fill: #FAA61A; }
 }
 
 @keyframes lights {
-  15% {
-    opacity: 0;
+  15% { opacity: 0; }
+  65% { opacity: 1; }
+}
 
-  }
+@keyframes appearance {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
-  65% {
-    opacity: 1;
-  }
-
-
+@keyframes top {
+  0% { top: 100vh; }
+  100% { top: 40vh; }
 }
 
 .anim {
@@ -91,12 +70,16 @@
   width: 100%;
 }
 
-#mission, #vector, #topic{
-  display: block;
-  //width: 70%;
+//#mission, #vector, #topic{
+//  display: block;
+//  //width: 70%;
+//
+//}
 
-}
-
+//
+//#lamp {
+//  animation: down
+//}
 .fixed {
   //position: fixed;
 }
@@ -155,6 +138,17 @@
 
 }
 
+#rect {
+   position: absolute;
+   width: 65vh;
+   height: 65vh;
+   //background-color: red;
+   top: 40vh;
+   left: 0;
+  animation: top 1s 5s backwards;
+
+ }
+
 .lead {
   fill: #FAA61A;
   //fill: #A3A9B3;
@@ -168,6 +162,10 @@
   opacity: 0;
 }
 
+#search-img {
+  animation: appearance 1s 4s backwards;
+}
+
 
 /* -------------------------
    basic
@@ -177,11 +175,17 @@ h1 {
 
 }
 
+h2, p, li {
+  margin-left: 10%;
+}
+
 h2 {
   color:#FAA61A;
   letter-spacing: 4px;
   text-transform:uppercase;
 }
+
+
 
 
 /* --------------------------------
@@ -192,7 +196,8 @@ section {
   #{$brk-large},
   #{$brk-medium},
   #{$brk-narrow} {
-    height: 100vh;
+    height: 98vh;
+    margin-bottom: 2vh;
   }
 }
 

@@ -339,15 +339,22 @@ p, li {
     opacity: 0; }
   65% {
     opacity: 1; } }
+@keyframes appearance {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes top {
+  0% {
+    top: 100vh; }
+  100% {
+    top: 40vh; } }
 .anim {
   position: absolute;
   display: block;
   margin: 25vh auto 0;
   /*height: 100vh;*/
   width: 100%; }
-
-#mission, #vector, #topic {
-  display: block; }
 
 .logo {
   opacity: 0.8;
@@ -393,6 +400,14 @@ p, li {
 .lamp:hover .lights {
   opacity: 1; }
 
+#rect {
+  position: absolute;
+  width: 65vh;
+  height: 65vh;
+  top: 40vh;
+  left: 0;
+  animation: top 1s 5s backwards; }
+
 .lead {
   fill: #FAA61A;
   /*stroke-width: 0.5;*/
@@ -403,9 +418,15 @@ p, li {
 .hidden {
   opacity: 0; }
 
+#search-img {
+  animation: appearance 1s 4s backwards; }
+
 /* -------------------------
    basic
 ----------------------------- */
+h2, p, li {
+  margin-left: 10%; }
+
 h2 {
   color: #FAA61A;
   letter-spacing: 4px;
@@ -416,7 +437,8 @@ h2 {
 -------------------------------- */
 @media (max-width: 2570px), (max-width: 1440px), (max-width: 1285px), (max-width: 1024px) {
   section {
-    height: 100vh; } }
+    height: 98vh;
+    margin-bottom: 2vh; } }
 
 .animation-element {
   padding-top: 5%;
