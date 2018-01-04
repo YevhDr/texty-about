@@ -32,20 +32,83 @@
   }
 }
 
-svg {
+@keyframes brain {
+  25% {
+    opacity: 1;
+    stroke: grey;
+    fill:grey;
+  }
+
+  75% {
+    opacity: 1;
+    stroke: #FAA61A;
+    fill: #FAA61A;
+  }
+}
+
+@keyframes lights {
+  15% {
+    opacity: 0;
+
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+
+}
+
+.anim {
   display: block;
   margin: 25vh auto 0;
   /*height: 100vh;*/
   width: 50%;
 }
 
-.logo {
+.fixed {
+  //position: fixed;
+}
+
+.logo{
   stroke: #3A3F4A;
   stroke-width: 0.5;
   stroke-dasharray: 810;
   stroke-dashoffset: 810;
   animation: offset 2s linear forwards, fill-it 1s 2s forwards;
   /*animation-iteration-count: infinite;*/
+}
+
+
+.wire {
+  fill:none;
+  stroke: #FAA61A;
+  stroke-width: 3;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: offset 4s linear forwards;
+
+}
+
+.brain {
+  fill:grey;
+  stroke: grey;
+  stroke-width: 2;
+  animation: brain 2s backwards;
+  animation-iteration-count: infinite;
+}
+
+.lights {
+  fill:#FAA61A;
+  stroke: #FAA61A;
+  opacity: 0;
+}
+
+.lamp:hover .lights {
+  opacity:1;
+  //animation: lights 2s backwards;
+  //animation-iteration-count: infinite;
+
 }
 
 .lead {
@@ -88,6 +151,7 @@ section {
 }
 
 .animation-element {
+  padding-top:5%;
   opacity: 0;
   position: relative;
 }
