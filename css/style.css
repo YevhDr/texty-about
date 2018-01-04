@@ -291,6 +291,9 @@ p, li {
       fill: none;
       stroke: none; }
 
+/* ----------------------
+      flying particles
+ ------------------------ */
 #particles-js {
   background-color: #e5e5e5;
   position: fixed;
@@ -313,6 +316,10 @@ p, li {
   100% {
     stroke-width: 0;
     fill: #515661; } }
+@keyframes fill-it-h2 {
+  100% {
+    stroke-width: 0;
+    fill: #FAA61A; } }
 @keyframes opacity {
   0% {
     opacity: 0; }
@@ -339,13 +346,29 @@ p, li {
   /*height: 100vh;*/
   width: 100%; }
 
+#mission, #vector, #topic {
+  display: block; }
+
 .logo {
+  opacity: 0.8;
   stroke: #3A3F4A;
   stroke-width: 0.5;
   stroke-dasharray: 810;
   stroke-dashoffset: 810;
-  animation: offset 2s linear forwards, fill-it 1s 2s forwards;
-  /*animation-iteration-count: infinite;*/ }
+  animation: offset 2s linear forwards, fill-it 1s 2s forwards; }
+
+.mission-draw,
+.vector-draw,
+.topic-draw {
+  height: 30px;
+  opacity: 0.8;
+  fill: transparency !important;
+  stroke: #FAA61A;
+  stroke-width: 3;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: offset 3s 1s linear forwards, fill-it-h2 1s 3s forwards;
+  margin-bottom: 0; }
 
 .wire {
   fill: none;
@@ -384,11 +407,13 @@ p, li {
    basic
 ----------------------------- */
 h2 {
-  color: #FAA61A; }
+  color: #FAA61A;
+  letter-spacing: 4px;
+  text-transform: uppercase; }
 
-/* -------------------------
-   section appearence animation
------------------------------ */
+/* --------------------------------
+   section appearance animation
+-------------------------------- */
 @media (max-width: 2570px), (max-width: 1440px), (max-width: 1285px), (max-width: 1024px) {
   section {
     height: 100vh; } }

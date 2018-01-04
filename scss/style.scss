@@ -5,7 +5,9 @@
 @import "components/footer";
 @import "components/weirdo";
 
-
+/* ----------------------
+      flying particles
+ ------------------------ */
 #particles-js {
   background-color: #e5e5e5;
   position:fixed;
@@ -19,6 +21,7 @@
 #overlay {
   position: relative;
 }
+
 /* ----------------------
       animation
  ------------------------ */
@@ -32,6 +35,13 @@
   100% {
     stroke-width: 0;
     fill: #515661;
+  }
+}
+
+@keyframes fill-it-h2 {
+  100% {
+    stroke-width: 0;
+    fill: #FAA61A;
   }
 }
 
@@ -81,20 +91,39 @@
   width: 100%;
 }
 
+#mission, #vector, #topic{
+  display: block;
+  //width: 70%;
+
+}
+
 .fixed {
   //position: fixed;
 }
 
-.logo{
+.logo {
+  opacity: 0.8;
   stroke: #3A3F4A;
   stroke-width: 0.5;
   stroke-dasharray: 810;
   stroke-dashoffset: 810;
   animation: offset 2s linear forwards, fill-it 1s 2s forwards;
-  /*animation-iteration-count: infinite;*/
+
 }
 
-
+.mission-draw,
+.vector-draw,
+.topic-draw {
+  height: 30px;
+  opacity: 0.8;
+  fill:transparency!important;
+  stroke: #FAA61A;
+  stroke-width: 3;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: offset 3s 1s linear forwards, fill-it-h2 1s 3s forwards;
+  margin-bottom: 0;
+}
 .wire {
   fill:none;
   stroke: #FAA61A;
@@ -150,12 +179,14 @@ h1 {
 
 h2 {
   color:#FAA61A;
+  letter-spacing: 4px;
+  text-transform:uppercase;
 }
 
 
-/* -------------------------
-   section appearence animation
------------------------------ */
+/* --------------------------------
+   section appearance animation
+-------------------------------- */
 section {
   @media #{$brk-xlarge},
   #{$brk-large},
