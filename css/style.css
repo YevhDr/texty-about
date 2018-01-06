@@ -3,9 +3,9 @@ html {
   min-height: 100%; }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 100%;
-  color: #383e47;
+  color: #b3b4b6;
   width: 100%;
   /*footer height plus padding*/
   margin-bottom: 200px; }
@@ -38,8 +38,8 @@ h3 {
   font-weight: normal; }
 
 p, li {
-  font-size: 1.6em;
-  line-height: 2em; }
+  font-size: 1.8rem;
+  line-height: 2.5rem; }
 
 /* ======== HEADER ======== */
 .logo {
@@ -315,7 +315,7 @@ p, li {
 @keyframes fill-it {
   100% {
     stroke-width: 0;
-    fill: #515661; } }
+    fill: #b3b4b6; } }
 @keyframes fill-it-h2 {
   100% {
     stroke-width: 0;
@@ -358,7 +358,7 @@ p, li {
 
 .logo {
   opacity: 0.8;
-  stroke: #3A3F4A;
+  stroke: #b3b4b6;
   stroke-width: 0.5;
   stroke-dasharray: 810;
   stroke-dashoffset: 810;
@@ -424,6 +424,10 @@ p, li {
 /* -------------------------
    basic
 ----------------------------- */
+body {
+  background-color: #383e47;
+  overflow-x: hidden; }
+
 h2, p, li {
   margin-left: 10%; }
 
@@ -437,8 +441,10 @@ h2 {
 -------------------------------- */
 @media (max-width: 2570px), (max-width: 1440px), (max-width: 1285px), (max-width: 1024px) {
   section {
-    height: 98vh;
     margin-bottom: 2vh; } }
+
+.full-width {
+  height: 99vh; }
 
 .animation-element {
   padding-top: 5%;
@@ -466,7 +472,44 @@ h2 {
   transform: translate3d(0px, 0px, 0px); }
 
 /* ----------------------------------
-  particles
+  horizontal scrolling
  ----------------------------------- */
+/* Needed for TwoStep to work */
+.parent {
+  display: flex;
+  margin: 50px auto 20px; }
+
+.narrative {
+  width: 33.3%; }
+
+.narrative-item {
+  min-height: 300px;
+  color: #ccc;
+  transition: color 200ms;
+  padding-right: 10px;
+  font-size: 20px;
+  opacity: 0; }
+
+.narrative-item.active {
+  opacity: 1; }
+
+.rightcol {
+  width: 66.6%; }
+
+.chart {
+  width: 50vw;
+  background: #e4e4e4;
+  box-sizing: border-box; }
+
+@media screen and (max-width: 600px) {
+  .narrative, .rightcol {
+    width: 50%; }
+
+  .chart {
+    height: 200px;
+    font-size: 16px;
+    padding: 8px; } }
+.omg {
+  width: 100% !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,6 +16,7 @@
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css">
 
 </head>
 <style>
@@ -25,17 +26,7 @@
 
 
 <body>
-<script src="lib/jquery-2.1.4.min.js"></script>
-<script src="lib/bootstrap.min.js" type="text/javascript"></script>
-<script src="lib/share-behavior.js"></script>
-<script src="js/animation-on-scroll.js"></script>
 
-<!--move down/up when scrolling-->
-<script>
-    $(window).scroll(function(){
-        $("#rect").stop().animate({"marginTop": ($(window).scrollTop()) + "px", "marginLeft":($(window).scrollLeft()) + "px"}, "slow" );
-    });
-</script>
 
 <!--particles-->
 <!--<div id="particles-js"></div>-->
@@ -44,42 +35,42 @@
 
 
 <!--object which moving down/up-->
-<div id="rect">
-    <img id="search-img" src="img/search-01.png" width="100%">
-</div>
-
+<!--<div id="rect">-->
+    <!--<img id="search-img" src="img/search-01.png" width="100%">-->
+<!--</div>-->
 
 
 <div id="overlay">
-<section>
-    <div class="col-md-offset-3 col-md-6">
-    <svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 400">
-        <g>
-            <path class="logo" fill="transparent" d="M20.695,31.486h107.578v28.281H92.18v86.25H56.789v-86.25H20.695
+    <section class="full-width">
+        <div class="col-md-offset-3 col-md-6">
+            <svg class="anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 400">
+                <g>
+                    <path class="logo" fill="transparent" d="M20.695,31.486h107.578v28.281H92.18v86.25H56.789v-86.25H20.695
 		V31.486z"/>
-            <path class="logo" fill="transparent" d="M144.211,31.486h94.844v24.453H179.68v18.203h55.078v23.359H179.68
+                    <path class="logo" fill="transparent" d="M144.211,31.486h94.844v24.453H179.68v18.203h55.078v23.359H179.68
 		v22.578h61.094v25.938h-96.563V31.486z"/>
-            <path class="logo" fill="transparent" d="M252.023,31.486h38.984l20.273,35.234l19.728-35.234h38.594
+                    <path class="logo" fill="transparent" d="M252.023,31.486h38.984l20.273,35.234l19.728-35.234h38.594
 		l-35.648,55.469l39.008,59.063h-39.766l-22.618-36.797l-22.617,36.797H248.43l39.507-59.688L252.023,31.486z"/>
-            <path class="logo" fill="transparent" d="M376.243,31.486h107.578v28.281h-36.094v86.25h-35.391v-86.25
+                    <path class="logo" fill="transparent" d="M376.243,31.486h107.578v28.281h-36.094v86.25h-35.391v-86.25
 		h-36.094V31.486z"/>
-            <path class="logo" fill="transparent" d="M488.274,31.486h39.311l23.076,38.638l23.121-38.638h39.102
+                    <path class="logo" fill="transparent" d="M488.274,31.486h39.311l23.076,38.638l23.121-38.638h39.102
 		l-44.531,66.563v47.969h-35.469V98.049L488.274,31.486z"/>
-        </g>
-        <!--<path class= "lead" fill="transparent" d="M20.695,176.525h592.188H20.695z"/>-->
-        <g>
-            <path class="lead" fill="transparent" d="M66.916,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L66.916,220.406z
+                </g>
+                <!--<path class= "lead" fill="transparent" d="M20.695,176.525h592.188H20.695z"/>-->
+                <g>
+                    <path class="lead" fill="transparent" d="M66.916,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L66.916,220.406z
 		 M62.236,217.598h3.84l-1.296-3.504l-0.576-2.664h-0.12l-0.576,2.688L62.236,217.598z"/>
-            <path class="lead" fill="transparent" d="M88.684,210.302h-7.056v13.68h-3.552v-16.8h10.608V210.302z"/>
-            <path class="lead" fill="transparent"
-                  d="M94.419,207.182h10.824v3.12h-7.272v3.648h6.6v3.12h-6.6v3.792h7.392v3.12H94.419V207.182z"/>
-            <path class="lead" fill="transparent"
-                  d="M122.667,217.046h-6.72v6.936h-3.552v-16.8h3.552v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
-            <path class="lead" fill="transparent"
-                  d="M149.5,226.958h-2.52l-0.384-2.976h-12.864v-16.8h3.552v13.68h6.336v-13.68h3.552v13.68h2.328V226.958z"/>
-            <path class="lead" fill="transparent"
-                  d="M157.227,209.102h-1.92v-1.92h7.392v1.92h-1.92v12.96h1.92v1.92h-7.392v-1.92h1.92V209.102z"/>
-            <path class="lead" fill="transparent" d="M181.539,223.982h-3.552v-6.576l-1.872,0.456l-3.84,6.12h-4.152l3.744-5.496l1.584-1.08
+                    <path class="lead" fill="transparent"
+                          d="M88.684,210.302h-7.056v13.68h-3.552v-16.8h10.608V210.302z"/>
+                    <path class="lead" fill="transparent"
+                          d="M94.419,207.182h10.824v3.12h-7.272v3.648h6.6v3.12h-6.6v3.792h7.392v3.12H94.419V207.182z"/>
+                    <path class="lead" fill="transparent"
+                          d="M122.667,217.046h-6.72v6.936h-3.552v-16.8h3.552v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
+                    <path class="lead" fill="transparent"
+                          d="M149.5,226.958h-2.52l-0.384-2.976h-12.864v-16.8h3.552v13.68h6.336v-13.68h3.552v13.68h2.328V226.958z"/>
+                    <path class="lead" fill="transparent"
+                          d="M157.227,209.102h-1.92v-1.92h7.392v1.92h-1.92v12.96h1.92v1.92h-7.392v-1.92h1.92V209.102z"/>
+                    <path class="lead" fill="transparent" d="M181.539,223.982h-3.552v-6.576l-1.872,0.456l-3.84,6.12h-4.152l3.744-5.496l1.584-1.08
 		c-0.56-0.128-1.084-0.324-1.572-0.588c-0.488-0.264-0.916-0.604-1.284-1.02c-0.368-0.416-0.656-0.908-0.864-1.476
 		c-0.208-0.567-0.312-1.212-0.312-1.932c0-1.008,0.192-1.86,0.576-2.556c0.384-0.696,0.916-1.256,1.596-1.68
 		c0.68-0.424,1.488-0.732,2.424-0.924s1.948-0.288,3.036-0.288c0.288,0,0.624,0.008,1.008,0.024c0.384,0.016,0.78,0.04,1.188,0.072
@@ -88,15 +79,15 @@
 		c-0.184,0.328-0.276,0.74-0.276,1.236c0,0.48,0.087,0.884,0.264,1.212c0.176,0.328,0.42,0.592,0.732,0.792s0.68,0.344,1.104,0.432
 		c0.424,0.088,0.876,0.132,1.356,0.132h1.344v-4.944c-0.192-0.032-0.384-0.056-0.576-0.072
 		C177.219,210.07,176.963,210.062,176.643,210.062z"/>
-            <path class="lead" fill="transparent" d="M218.162,207.182h3.36v7.416l0.936-0.336l3.792-7.08h4.032l-4.272,7.368l-1.248,0.84l1.512,1.032l4.8,7.56
+                    <path class="lead" fill="transparent" d="M218.162,207.182h3.36v7.416l0.936-0.336l3.792-7.08h4.032l-4.272,7.368l-1.248,0.84l1.512,1.032l4.8,7.56
 		h-4.296l-4.224-7.224h-1.032v7.224h-3.36v-7.512l-0.912,0.336l-4.224,7.176h-4.176l4.776-7.32l1.416-0.96l-1.368-0.912
 		l-4.464-7.608h4.152l3.768,7.128h1.032V207.182z"/>
-            <path class="lead" fill="transparent" d="M241.946,214.502l0.528,2.136h0.168l0.408-2.232l2.736-7.224h3.72l-4.872,11.688
+                    <path class="lead" fill="transparent" d="M241.946,214.502l0.528,2.136h0.168l0.408-2.232l2.736-7.224h3.72l-4.872,11.688
 		c-0.368,0.896-0.736,1.672-1.104,2.328c-0.368,0.656-0.76,1.204-1.176,1.644c-0.417,0.44-0.88,0.768-1.392,0.984
 		c-0.512,0.216-1.104,0.324-1.776,0.324c-0.576,0-1.032-0.032-1.368-0.096s-0.712-0.224-1.128-0.48l0.888-2.856
 		c0.304,0.144,0.58,0.232,0.828,0.264c0.248,0.032,0.508,0.048,0.78,0.048c0.832,0,1.408-0.56,1.728-1.68l-6.84-12.168h4.176
 		L241.946,214.502z"/>
-            <path class="lead" fill="transparent" d="M255.05,207.35c0.72-0.128,1.52-0.228,2.4-0.3c0.88-0.072,1.76-0.108,2.64-0.108
+                    <path class="lead" fill="transparent" d="M255.05,207.35c0.72-0.128,1.52-0.228,2.4-0.3c0.88-0.072,1.76-0.108,2.64-0.108
 		c0.896,0,1.8,0.068,2.712,0.204c0.912,0.136,1.732,0.408,2.46,0.816s1.324,0.976,1.788,1.704c0.464,0.728,0.696,1.692,0.696,2.892
 		c0,1.056-0.2,1.956-0.6,2.7c-0.4,0.744-0.932,1.348-1.596,1.812c-0.664,0.464-1.42,0.804-2.268,1.02
 		c-0.848,0.216-1.72,0.324-2.616,0.324c-0.08,0-0.216,0-0.408,0s-0.396-0.004-0.612-0.012c-0.216-0.008-0.42-0.02-0.612-0.036
@@ -105,19 +96,19 @@
 		c0.16,0.008,0.308,0.016,0.444,0.024c0.136,0.008,0.244,0.012,0.324,0.012c0.464,0,0.928-0.032,1.392-0.096
 		c0.464-0.063,0.876-0.2,1.236-0.408c0.36-0.208,0.652-0.492,0.876-0.852s0.336-0.844,0.336-1.452c0-0.512-0.104-0.924-0.312-1.236
 		s-0.484-0.556-0.828-0.732c-0.344-0.176-0.736-0.296-1.176-0.36C261.222,210.094,260.777,210.062,260.33,210.062z"/>
-            <path class="lead" fill="transparent"
-                  d="M284.594,217.046h-6.72v6.936h-3.552v-16.8h3.552v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
-            <path class="lead" fill="transparent" d="M304.682,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L304.682,220.406z
+                    <path class="lead" fill="transparent"
+                          d="M284.594,217.046h-6.72v6.936h-3.552v-16.8h3.552v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
+                    <path class="lead" fill="transparent" d="M304.682,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L304.682,220.406z
 		 M300.001,217.598h3.84l-1.296-3.504l-0.576-2.664h-0.12l-0.576,2.688L300.001,217.598z"/>
-            <path class="lead" fill="transparent" d="M324.673,210.302h-3.864c-0.08,1.521-0.164,2.892-0.252,4.116s-0.207,2.324-0.359,3.3
+                    <path class="lead" fill="transparent" d="M324.673,210.302h-3.864c-0.08,1.521-0.164,2.892-0.252,4.116s-0.207,2.324-0.359,3.3
 		c-0.152,0.976-0.356,1.844-0.612,2.604c-0.256,0.76-0.575,1.428-0.96,2.004c-0.256,0.368-0.54,0.672-0.852,0.912
 		c-0.313,0.24-0.637,0.428-0.973,0.564c-0.336,0.136-0.664,0.232-0.984,0.288c-0.32,0.056-0.616,0.084-0.888,0.084
 		c-0.417,0-0.74-0.032-0.972-0.096c-0.232-0.064-0.484-0.16-0.756-0.288l0.384-2.976c0.176,0.064,0.384,0.096,0.624,0.096
 		c0.272,0,0.544-0.064,0.816-0.192c0.272-0.128,0.512-0.336,0.72-0.624c0.256-0.352,0.483-0.855,0.685-1.512
 		c0.199-0.656,0.367-1.508,0.504-2.556c0.135-1.048,0.248-2.3,0.336-3.756s0.147-3.152,0.18-5.088h10.775v16.8h-3.552V210.302z"/>
-            <path class="lead" fill="transparent"
-                  d="M337.057,209.102h-1.92v-1.92h7.392v1.92h-1.92v12.96h1.92v1.92h-7.392v-1.92h1.92V209.102z"/>
-            <path class="lead" fill="transparent" d="M361.777,223.262c-0.528,0.369-1.225,0.636-2.089,0.804c-0.863,0.168-1.752,0.252-2.664,0.252
+                    <path class="lead" fill="transparent"
+                          d="M337.057,209.102h-1.92v-1.92h7.392v1.92h-1.92v12.96h1.92v1.92h-7.392v-1.92h1.92V209.102z"/>
+                    <path class="lead" fill="transparent" d="M361.777,223.262c-0.528,0.369-1.225,0.636-2.089,0.804c-0.863,0.168-1.752,0.252-2.664,0.252
 		c-1.071,0-2.1-0.16-3.084-0.48c-0.983-0.32-1.855-0.832-2.615-1.536c-0.761-0.704-1.364-1.608-1.813-2.712
 		s-0.672-2.439-0.672-4.008c0-1.632,0.256-3.004,0.768-4.116c0.513-1.112,1.168-2.008,1.969-2.688c0.8-0.68,1.688-1.172,2.664-1.476
 		c0.976-0.304,1.936-0.456,2.88-0.456c1.04,0,1.916,0.064,2.628,0.192s1.3,0.28,1.764,0.456l-0.696,2.976
@@ -125,78 +116,72 @@
 		c-0.416,0.464-0.74,1.048-0.972,1.752c-0.232,0.704-0.349,1.528-0.349,2.472c0,0.832,0.104,1.592,0.313,2.28
 		c0.208,0.688,0.52,1.28,0.936,1.776c0.416,0.497,0.944,0.88,1.584,1.152c0.641,0.272,1.384,0.408,2.232,0.408
 		c0.784,0,1.443-0.072,1.98-0.216c0.535-0.144,1.012-0.328,1.428-0.552L361.777,223.262z"/>
-            <path class="lead" fill="transparent"
-                  d="M380.761,210.302h-5.328v13.68h-3.552v-13.68h-5.328v-3.12h14.208V210.302z"/>
-            <path class="lead" fill="transparent" d="M397.681,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24H387v-16.8h3.553v9.048l-0.24,2.232h0.144
+                    <path class="lead" fill="transparent"
+                          d="M380.761,210.302h-5.328v13.68h-3.552v-13.68h-5.328v-3.12h14.208V210.302z"/>
+                    <path class="lead" fill="transparent" d="M397.681,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24H387v-16.8h3.553v9.048l-0.24,2.232h0.144
 		l1.296-2.232l6.816-9.048h2.664v16.8h-3.552V214.718z"/>
-            <path class="lead" fill="transparent" d="M413.232,216.878h-0.936v7.104h-3.553v-16.8h3.553v7.392l0.84-0.36l5.04-7.032h4.056l-5.328,7.032
+                    <path class="lead" fill="transparent" d="M413.232,216.878h-0.936v7.104h-3.553v-16.8h3.553v7.392l0.84-0.36l5.04-7.032h4.056l-5.328,7.032
 		l-1.392,0.912l1.439,0.96l6.097,7.896h-4.393L413.232,216.878z"/>
-            <path class="lead" fill="transparent" d="M439.921,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24h-2.641v-16.8h3.553v9.048l-0.24,2.232h0.144
+                    <path class="lead" fill="transparent" d="M439.921,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24h-2.641v-16.8h3.553v9.048l-0.24,2.232h0.144
 		l1.296-2.232l6.816-9.048h2.664v16.8h-3.552V214.718z"/>
-            <path class="lead" fill="transparent" d="M488.664,226.958h-2.521l-0.384-2.976H474l-0.385,2.976h-2.52v-6.096h1.944
+                    <path class="lead" fill="transparent" d="M488.664,226.958h-2.521l-0.384-2.976H474l-0.385,2.976h-2.52v-6.096h1.944
 		c0.128-0.176,0.327-0.56,0.6-1.152c0.271-0.592,0.544-1.44,0.816-2.544c0.271-1.104,0.508-2.476,0.708-4.116
 		c0.199-1.64,0.283-3.596,0.252-5.868h10.943v13.68h2.305V226.958z M482.808,220.862v-10.56h-4.08
 		c-0.096,2.752-0.34,5.008-0.731,6.768c-0.393,1.76-0.789,3.024-1.188,3.792H482.808z"/>
-            <path class="lead" fill="transparent" d="M504.096,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L504.096,220.406z
+                    <path class="lead" fill="transparent" d="M504.096,220.406h-5.664l-1.368,3.576h-3.552l6.576-16.92h2.616l6.6,16.92h-3.768L504.096,220.406z
 		 M499.416,217.598h3.84l-1.296-3.504l-0.576-2.664h-0.12l-0.576,2.688L499.416,217.598z"/>
-            <path class="lead" fill="transparent"
-                  d="M525.527,217.046h-6.72v6.936h-3.553v-16.8h3.553v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
-            <path class="lead" fill="transparent" d="M547.271,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24h-2.641v-16.8h3.553v9.048l-0.24,2.232h0.144
+                    <path class="lead" fill="transparent"
+                          d="M525.527,217.046h-6.72v6.936h-3.553v-16.8h3.553v6.744h6.72v-6.744h3.552v16.8h-3.552V217.046z"/>
+                    <path class="lead" fill="transparent" d="M547.271,214.718l0.191-2.136h-0.12l-1.224,2.16l-6.888,9.24h-2.641v-16.8h3.553v9.048l-0.24,2.232h0.144
 		l1.296-2.232l6.816-9.048h2.664v16.8h-3.552V214.718z"/>
-            <path class="lead" fill="transparent" d="M562.631,215.438l-5.089-8.256h4.297l2.808,4.776l0.647,1.656l0.624-1.656l2.929-4.776h3.863l-5.279,8.088
+                    <path class="lead" fill="transparent" d="M562.631,215.438l-5.089-8.256h4.297l2.808,4.776l0.647,1.656l0.624-1.656l2.929-4.776h3.863l-5.279,8.088
 		l5.544,8.712h-4.248l-3.216-5.112l-0.721-1.728l-0.695,1.728l-3.217,5.112h-3.863L562.631,215.438z"/>
-        </g>
-    </svg>
-    </div>
-</section>
-
-
-<section id="first" style="background-color: transparent">
-    <div class="animation-element slide-left testimonial">
-    <div class="row">
-    <div class="col-md-offset-3 col-md-6">
-        <h2>МІСІЯ</h2>
-
-
-            <p>Сприяти прозорості влади шляхом розвитку якісної журналістики та журналістики даних, яка передбачає
-                аналіз і
-                подачу у цікавій та зрозумілій формі великі масиви даних. За допомогою аналізу великих масивів даних
-                сприяти
-                усвідомленому прийняттю рішень політиками, чиновниками та громадянами. Поширення «цифрової культури»
-                серед
-                політиків, чиновників та представників громадянського суспільства.</p>
+                </g>
+            </svg>
         </div>
+    </section>
 
-        <div class="col-md-4">
 
+    <section id="first" class="full-width" style="background-color: transparent">
+        <div class="animation-element slide-left testimonial">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <h2>МІСІЯ</h2>
+
+
+                    <p>Сприяти прозорості влади шляхом розвитку якісної журналістики та журналістики даних, яка передбачає аналіз і подачу у цікавій та зрозумілій формі великі масиви даних. За допомогою аналізу великих масивів даних сприяти усвідомленому прийняттю рішень політиками, чиновниками та громадянами. Поширення «цифрової культури» серед політиків, чиновників та представників громадянського суспільства.</p>
+                </div>
+
+                <div class="col-md-4">
+
+
+                </div>
+            </div>
 
         </div>
-    </div>
+    </section>
 
-    </div>
-</section>
+    <!--testimonial two -->
+    <section class="full-width" style="background-color:#ffffff">
+        <div class="animation-element slide-left testimonial">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-4">
 
-<!--testimonial two -->
-<section style="background-color:#ffffff">
-    <div class="animation-element slide-left testimonial">
-    <div class="row">
-    <div class="col-md-offset-3 col-md-4">
+                    <h2>НАПРЯМИ ДІЯЛЬНОСТІ</h2>
+                    <ul>
+                        <li>Аналіз великих баз даних та їх візуалізація</li>
+                        <li>Підготовка ґрунтовних журналістських матеріалів</li>
+                        <li>Створення стрічки новин</li>
+                        <li>Лекції і семінари з журналістики даних</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
 
-            <h2>НАПРЯМИ ДІЯЛЬНОСТІ</h2>
-            <ul>
-                <li>Аналіз великих баз даних та їх візуалізація</li>
-                <li>Підготовка ґрунтовних журналістських матеріалів</li>
-                <li>Створення стрічки новин</li>
-                <li>Лекції і семінари з журналістики даних</li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-
-            <svg class="lamp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 500" >
-                <g>
-                    <g>
+                    <svg class="lamp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 500">
                         <g>
-                            <path class="brain" d="M358.633,248.222c-0.809-2.982-2.816-5.422-5.795-7.057c-2.783-1.527-6.236-2.278-9.826-2.464
+                            <g>
+                                <g>
+                                    <path class="brain" d="M358.633,248.222c-0.809-2.982-2.816-5.422-5.795-7.057c-2.783-1.527-6.236-2.278-9.826-2.464
 				c-3.081-11.833-4.298-29.747-4.52-37.682c-0.04-1.323-1.148-2.374-2.471-2.331c-1.328,0.038-2.369,1.142-2.332,2.47
 				c0.084,3.022,0.779,23.098,4.401,37.621c-3.149,0.248-6.228,0.858-8.895,1.684c-0.696,0.217-1.368,0.481-2.026,0.763
 				c-0.654-0.281-1.329-0.546-2.027-0.763c-2.662-0.825-5.744-1.436-8.893-1.684c3.619-14.523,4.318-34.599,4.403-37.621
@@ -212,156 +197,173 @@
 				C330.536,247.761,331.765,249.131,331.724,249.792z M353.999,249.48c0.099,0.368-0.247,0.865-0.819,1.184
 				c-1.207,0.67-3.463,0.542-5.854-2.034c-1.032-1.115-1.955-2.842-2.781-4.998c2.227,0.263,4.293,0.815,5.981,1.744
 				C352.389,246.396,353.522,247.742,353.999,249.48z"/>
-                            <path class="brain" d="M285.642,197.83c-1.384,0-2.769,0.501-3.862,1.517c-13.551,12.586-21.324,30.408-21.324,48.891
+                                    <path class="brain" d="M285.642,197.83c-1.384,0-2.769,0.501-3.862,1.517c-13.551,12.586-21.324,30.408-21.324,48.891
 				c0,36.786,29.93,66.715,66.714,66.715c36.788,0,66.715-29.93,66.715-66.715c0-18.483-7.385-35.669-20.793-48.395
 				c-2.277-2.161-5.869-2.065-8.029,0.211c-2.16,2.273-2.064,5.867,0.208,8.025c11.13,10.557,17.259,24.822,17.259,40.159
 				c0,30.526-24.836,55.358-55.359,55.358c-30.524,0-55.356-24.832-55.356-55.358c0-15.339,6.447-30.124,17.694-40.57
 				c2.295-2.135,2.428-5.726,0.296-8.024C288.684,198.44,287.166,197.83,285.642,197.83z"/>
-                            <path fill="grey" d="M359.627,190.514c0-3.084-2.498-5.583-5.583-5.583h-53.747c-3.084,0-5.585,2.499-5.585,5.583l0,0
+                                    <path fill="grey" d="M359.627,190.514c0-3.084-2.498-5.583-5.583-5.583h-53.747c-3.084,0-5.585,2.499-5.585,5.583l0,0
 				c0,3.083,2.5,5.583,5.585,5.583h53.747C357.129,196.097,359.627,193.597,359.627,190.514L359.627,190.514z"/>
-                            <path fill="grey" d="M359.627,176.122c0-3.084-2.498-5.584-5.583-5.584h-53.747c-3.084,0-5.585,2.5-5.585,5.584l0,0
+                                    <path fill="grey" d="M359.627,176.122c0-3.084-2.498-5.584-5.583-5.584h-53.747c-3.084,0-5.585,2.5-5.585,5.584l0,0
 				c0,3.082,2.5,5.583,5.585,5.583h53.747C357.129,181.705,359.627,179.204,359.627,176.122L359.627,176.122z"/>
-                            <path fill="grey" d="M359.627,161.727c0-3.083-2.498-5.583-5.583-5.583h-53.747c-3.084,0-5.585,2.5-5.585,5.583l0,0
+                                    <path fill="grey" d="M359.627,161.727c0-3.083-2.498-5.583-5.583-5.583h-53.747c-3.084,0-5.585,2.5-5.585,5.583l0,0
 				c0,3.086,2.5,5.586,5.585,5.586h53.747C357.129,167.313,359.627,164.813,359.627,161.727L359.627,161.727z"/>
-                            <path fill="grey" d="M306.833,152.756v-3.215c0-7.977,6.464-14.442,14.442-14.442h11.792c7.977,0,14.44,6.465,14.44,14.442
+                                    <path fill="grey" d="M306.833,152.756v-3.215c0-7.977,6.464-14.442,14.442-14.442h11.792c7.977,0,14.44,6.465,14.44,14.442
 				v3.215H306.833z"/>
-                        </g>
-                        <path class="lights" d="M431.693,236.274c-0.004,0-0.004,0-0.006,0l-22.437,0.038c-2.737,0.004-4.951,2.226-4.948,4.961
+                                </g>
+                                <path class="lights" d="M431.693,236.274c-0.004,0-0.004,0-0.006,0l-22.437,0.038c-2.737,0.004-4.951,2.226-4.948,4.961
 			c0.003,2.732,2.225,4.949,4.957,4.949c0.002,0,0.002,0,0.006,0l22.433-0.034c2.738-0.004,4.954-2.227,4.951-4.964
 			C436.643,238.489,434.425,236.274,431.693,236.274z"/>
-                        <path class="lights" d="M244.677,236.26c-0.002,0-0.005,0-0.009,0l-23.065,0.034c-2.738,0.002-4.953,2.225-4.947,4.96
+                                <path class="lights" d="M244.677,236.26c-0.002,0-0.005,0-0.009,0l-23.065,0.034c-2.738,0.002-4.953,2.225-4.947,4.96
 			c0.003,2.737,2.221,4.952,4.957,4.952c0.002,0,0.002,0,0.005,0l23.066-0.035c2.735-0.003,4.953-2.224,4.95-4.964
 			C249.629,238.473,247.411,236.26,244.677,236.26z"/>
-                        <path class="lights" d="M327.154,325.025c-0.004,0-0.006,0-0.008,0c-2.735,0.002-4.952,2.225-4.948,4.961l0.032,21.172
+                                <path class="lights" d="M327.154,325.025c-0.004,0-0.006,0-0.008,0c-2.735,0.002-4.952,2.225-4.948,4.961l0.032,21.172
 			c0.004,2.734,2.223,4.951,4.955,4.951c0.006,0,0.008,0,0.009,0c2.739-0.004,4.952-2.227,4.95-4.967l-0.033-21.168
 			C332.105,327.238,329.886,325.025,327.154,325.025z"/>
-                        <path class="lights" d="M388.17,298.947c-1.272,0-2.543,0.482-3.512,1.455c-1.932,1.938-1.93,5.076,0.01,7.01l14.047,14.01
+                                <path class="lights" d="M388.17,298.947c-1.272,0-2.543,0.482-3.512,1.455c-1.932,1.938-1.93,5.076,0.01,7.01l14.047,14.01
 			c1.937,1.932,5.074,1.93,7.009-0.012c1.932-1.936,1.929-5.076-0.011-7.01l-14.045-14.006
 			C390.7,299.428,389.435,298.947,388.17,298.947z"/>
-                        <path class="lights" d="M264.646,292.613c-1.266,0-2.534,0.484-3.499,1.451l-14.002,13.963c-1.937,1.934-1.94,5.072-0.005,7.01
+                                <path class="lights" d="M264.646,292.613c-1.266,0-2.534,0.484-3.499,1.451l-14.002,13.963c-1.937,1.934-1.94,5.072-0.005,7.01
 			c1.93,1.941,5.069,1.943,7.005,0.01l14.003-13.967c1.937-1.936,1.942-5.072,0.005-7.008
 			C267.185,293.1,265.917,292.613,264.646,292.613z"/>
-                    </g>
-                    <g>
-                        <g>
-                            <rect x="326.651" y="-2295.274" fill="grey" width="3.001" height="2442.252"/>
+                            </g>
+                            <g>
+                                <g>
+                                    <rect x="326.651" y="-2295.274" fill="grey" width="3.001" height="2442.252"/>
+                                </g>
+                            </g>
                         </g>
-                    </g>
-                </g>
-            </svg>
+                    </svg>
+                </div>
+
+
+            </div>
         </div>
+    </section>
+    <!--testimonial three -->
+    <section class="full-width" style="background-color:transparent">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="animation-element slide-left testimonial">
+                <h2>ПРІОРИТЕТНІ ТЕМИ</h2>
 
+                <ul>
+                    <li>Бюджетна політика</li>
+                    <li>Використання публічних коштів</li>
+                    <li>Власність і доходи політиків та чиновників</li>
+                    <li>Освіта</li>
+                    <li>Урбаністика</li>
+                    <li>Державні закупівлі</li>
+                    <li>Аналіз і візуалізація результатів виборів</li>
+                    <li>Енергетика</li>
+                    <li>Транспорт</li>
+                    <li>Зв'язок</li>
 
-    </div>
-    </div>
-</section>
-<!--testimonial three -->
-<section style="background-color:transparent">
-    <div class="col-md-offset-3 col-md-6">
-        <div class="animation-element slide-left testimonial">
-            <h2>ПРІОРИТЕТНІ ТЕМИ</h2>
-            <!--<svg id="topic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 726.509 85" height="40">-->
-<!--<g>-->
-	<!--<path class="topic hidden" fill="transparent" d="M6.116,17.843h31.883v40.086h-8.094V24.57H14.209v33.359H6.116V17.843z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M50.68,57.929V17.843h12.988c4.922,0,8.13,0.201,9.625,0.602c2.297,0.602,4.22,1.91,5.77,3.924-->
-		<!--c1.549,2.015,2.324,4.617,2.324,7.807c0,2.461-0.447,4.53-1.34,6.207c-0.894,1.677-2.028,2.994-3.404,3.951-->
-		<!--c-1.376,0.957-2.775,1.591-4.197,1.9c-1.933,0.383-4.73,0.574-8.395,0.574h-5.277v15.121H50.68z M58.774,24.625V36h4.43-->
-		<!--c3.19,0,5.323-0.209,6.398-0.629c1.075-0.419,1.918-1.075,2.529-1.969c0.61-0.893,0.916-1.932,0.916-3.117-->
-		<!--c0-1.458-0.429-2.661-1.285-3.609c-0.857-0.948-1.941-1.54-3.254-1.777c-0.966-0.182-2.908-0.273-5.824-0.273H58.774z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M92.21,57.929V17.843h8.094v40.086H92.21z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M110.798,38.132c0-4.083,0.61-7.51,1.832-10.281c0.911-2.042,2.155-3.874,3.732-5.496-->
-		<!--c1.577-1.622,3.304-2.825,5.182-3.609c2.497-1.057,5.377-1.586,8.641-1.586c5.906,0,10.632,1.832,14.178,5.496-->
-		<!--c3.545,3.664,5.318,8.759,5.318,15.285c0,6.472-1.759,11.535-5.277,15.189c-3.519,3.655-8.222,5.482-14.109,5.482-->
-		<!--c-5.961,0-10.701-1.818-14.219-5.455C112.557,49.521,110.798,44.513,110.798,38.132z M119.138,37.859-->
-		<!--c0,4.539,1.048,7.98,3.145,10.322c2.096,2.343,4.758,3.514,7.984,3.514s5.874-1.162,7.943-3.486-->
-		<!--c2.069-2.324,3.104-5.811,3.104-10.459c0-4.594-1.007-8.021-3.021-10.281c-2.015-2.26-4.689-3.391-8.025-3.391-->
-		<!--s-6.025,1.144-8.066,3.432C120.158,29.797,119.138,33.247,119.138,37.859z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M160.421,57.929V17.843h12.988c4.922,0,8.13,0.201,9.625,0.602c2.297,0.602,4.22,1.91,5.77,3.924-->
-		<!--c1.549,2.015,2.324,4.617,2.324,7.807c0,2.461-0.447,4.53-1.34,6.207c-0.894,1.677-2.028,2.994-3.404,3.951-->
-		<!--c-1.376,0.957-2.775,1.591-4.197,1.9c-1.933,0.383-4.73,0.574-8.395,0.574h-5.277v15.121H160.421z M168.515,24.625V36h4.43-->
-		<!--c3.19,0,5.323-0.209,6.398-0.629c1.075-0.419,1.918-1.075,2.529-1.969c0.61-0.893,0.916-1.932,0.916-3.117-->
-		<!--c0-1.458-0.429-2.661-1.285-3.609c-0.857-0.948-1.941-1.54-3.254-1.777c-0.966-0.182-2.908-0.273-5.824-0.273H168.515z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M202.306,17.843h7.574v26.688l16.242-26.688h8.066v40.086h-7.574V31.761L210.4,57.929h-8.094V17.843z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M255.894,57.929V24.625H244v-6.781h31.855v6.781h-11.867v33.305H255.894z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M285.501,57.929V17.843h29.723v6.781h-21.629v8.887h20.125v6.754h-20.125v10.91h22.395v6.754H285.501z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M336.301,57.929V24.625h-11.895v-6.781h31.855v6.781h-11.867v33.305H336.301z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M365.936,57.929V17.843h8.094v15.777h15.859V17.843h8.094v40.086h-8.094V40.402h-15.859v17.527H365.936z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M410.527,57.929V17.843h8.094v40.086H410.527z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M459.763,57.929V24.625h-11.895v-6.781h31.855v6.781h-11.867v33.305H459.763z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M489.37,57.929V17.843h29.723v6.781h-21.629v8.887h20.125v6.754h-20.125v10.91h22.395v6.754H489.37z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M531.036,57.929V17.843h12.113l7.273,27.344l7.191-27.344h12.141v40.086h-7.52V26.375l-7.957,31.555h-7.793-->
-		<!--l-7.93-31.555v31.555H531.036z"/>-->
-	<!--<path class="topic hidden" fill="transparent" d="M582.327,17.843h7.574v26.688l16.242-26.688h8.066v40.086h-7.574V31.761l-16.215,26.168h-8.094V17.843z"/>-->
-<!--</g>-->
-<!--</svg>-->
-            <ul>
-                <li>Бюджетна політика</li>
-                <li>Використання публічних коштів</li>
-                <li>Власність і доходи політиків та чиновників</li>
-                <li>Освіта</li>
-                <li>Урбаністика</li>
-                <li>Державні закупівлі</li>
-                <li>Аналіз і візуалізація результатів виборів</li>
-                <li>Енергетика</li>
-                <li>Транспорт</li>
-                <li>Зв'язок</li>
-
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
-<!--testimonial four -->
-<section style="background-color:#ffffff">
-    <div class="col-md-offset-3 col-md-6">
-    <div class="animation-element slide-left testimonial">
-        <h2>Проекти</h2>
-    </div>
-    </div>
-</section>
+    </section>
 
-<section style="background-color:#ffffff">
-    <div class="col-md-offset-3 col-md-6">
-    <div class="animation-element slide-left testimonial">
-        <h2>Команда</h2>
+    <section style="background-color:transparent; position:sticky!important;">
 
-    </div>
-    </div>
-</section>
+        <div class="col-md-offset-1 col-md-1" style="position: sticky; top:10px; left:10px;">
+            <div class="animation-element slide-left testimonial">
 
-<section style="background-color:#ffffff">
-    <div class="col-md-offset-3 col-md-6">
-    <div class="animation-element slide-left testimonial">
-        <h2>Правління</h2>
-        <svg id="headers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 400">
-            <g>
-                <path class="hidden one" fill="transparent" d="M20.695,31.486h107.578v28.281H92.18v86.25H56.789v-86.25H20.695
-		V31.486z"/>
-                <path class="hidden one" fill="transparent" d="M144.211,31.486h94.844v24.453H179.68v18.203h55.078v23.359H179.68
-		v22.578h61.094v25.938h-96.563V31.486z"/>
-                <path class="hidden one" fill="transparent" d="M252.023,31.486h38.984l20.273,35.234l19.728-35.234h38.594
-		l-35.648,55.469l39.008,59.063h-39.766l-22.618-36.797l-22.617,36.797H248.43l39.507-59.688L252.023,31.486z"/>
-                <path class="hidden one" fill="transparent" d="M376.243,31.486h107.578v28.281h-36.094v86.25h-35.391v-86.25
-		h-36.094V31.486z"/>
-                <path class="hidden one" fill="transparent" d="M488.274,31.486h39.311l23.076,38.638l23.121-38.638h39.102
-		l-44.531,66.563v47.969h-35.469V98.049L488.274,31.486z"/>
-            </g>
-            <!--<path class= "lead" fill="transparent" d="M20.695,176.525h592.188H20.695z"/>-->
+                        <h2 style="padding-top: 7vh;">Проекти</h2>
 
-        </svg>
-    </div>
-    </div>
-</section>
 
-<section style="background-color:transparent">
-    <div class="col-md-offset-3 col-md-6">
-    <div class="animation-element slide-left testimonial">
-        <h2>Аналітика</h2>
+            </div>
+        </div>
+        <div class="col-md-offset-1 col-md-6">
+            <div class="animation-element slide-left testimonial">
 
-    </div>
-    </div>
-</section>
+                <div class="parent">
+                    <div class="narrative">
+                        <div class="narrative-item">
+                            <p>Скільки малих річок у Києві, не знає ніхто. А їх багато: лише захованих під землю струмків і потічків — понад 100 кілометрів. Без них київські пагорби давно б з'їхали у Дніпро.</p>
+                        </div>
+                        <div class="narrative-item">
+                            <p>Дані з вашого мобільного телефону розкажуть про вас усе — навіть без прослуховування. Торік українські суди винесли 100 тисяч вироків за кримінальними справами. І 50 тисяч разів наші суди давали дозвіл на використання слідчими даних з мобільних телефонів українців.</p>
+                        </div>
+                        <div class="narrative-item">
+                            <p>Скільки малих річок у Києві, не знає ніхто. А їх багато: лише захованих під землю струмків і потічків — понад 100 кілометрів. Без них київські пагорби давно б з'їхали у Дніпро.</p>
+                        </div>
+                        <div class="narrative-item">
+                            <p>Дані з вашого мобільного телефону розкажуть про вас усе — навіть без прослуховування. Торік українські суди винесли 100 тисяч вироків за кримінальними справами. І 50 тисяч разів наші суди давали дозвіл на використання слідчими даних з мобільних телефонів українців.</p>
+                        </div>
+                        <div class="narrative-item">
+                            <p>Скільки малих річок у Києві, не знає ніхто. А їх багато: лише захованих під землю струмків і потічків — понад 100 кілометрів. Без них київські пагорби давно б з'їхали у Дніпро.</p>
+                        </div>
+                        <div class="narrative-item">
+                            <p>Дані з вашого мобільного телефону розкажуть про вас усе — навіть без прослуховування. Торік українські суди винесли 100 тисяч вироків за кримінальними справами. І 50 тисяч разів наші суди давали дозвіл на використання слідчими даних з мобільних телефонів українців.</p>
+                        </div>
+                    </div>
+                    <div class="rightcol">
+                        <div class="chart">
+                            Scroll down!
+                        </div>
+                    </div>
+                </div><!-- .parent -->
+
+            </div>
+        </div>
+    </section>
+    <!--testimonial four -->
+    <section style="background-color:transparent">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="animation-element slide-left testimonial">
+                <h2>Команда</h2>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="full-width" style="background-color:transparent">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="animation-element slide-left testimonial">
+                <h2>Правління</h2>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <img src="img/ng.png" style="background-color: red; width:200px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto culpa dicta fugit
+                            iusto minima nihil quas quisquam tempore ullam?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/ng.png" style="background-color: green; width:200px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto culpa dicta fugit
+                            iusto minima nihil quas quisquam tempore ullam?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/ng.png" style="background-color: blue; width:200px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto culpa dicta fugit
+                            iusto minima nihil quas quisquam tempore ullam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="background-color:transparent">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="animation-element slide-left testimonial">
+                <h2>Аналітика</h2>
+
+            </div>
+        </div>
+    </section>
 
 </div>
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fixto/0.5.0/fixto.min.js"></script>
+<script src="lib/two-step.js"></script>
+<script src="lib/bootstrap.min.js" type="text/javascript"></script>
+<script src="lib/share-behavior.js"></script>
+<script src="js/animation-on-scroll.js"></script>
 <script>
     var $animation_elements = $('.animation-element');
     var $window = $(window);
@@ -391,10 +393,49 @@
     $window.trigger('scroll');
 
 
-
-
 </script>
 
+
+<!--move down/up when scrolling-->
+<script>
+    $(window).scroll(function () {
+        $("#rect").stop().animate({
+            "marginTop": ($(window).scrollTop()) + "px",
+            "marginLeft": ($(window).scrollLeft()) + "px"
+        }, "slow");
+    });
+</script>
+<script>
+    var ts = new TwoStep({
+        elements: document.querySelectorAll('.narrative-item'),
+        onChange: function(event) {
+            console.log('Slide '+event.index);
+        },
+        offset:{'down':"50%",'up':"0"},
+        stick: document.querySelector('.rightcol'),
+        narrative: [
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Лабіринти київських вод</h2><a href='https://www.google.com' target='_blank'><img class='omg' src='img/rivers.jpg'/></a>");
+            },
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Вони стежать за тобою.І ти цього хочеш</h2><a href='http://texty.org.ua/d/cell_towers/' target='_blank'><img class='omg' src='img/towel.jpg'/></a>");
+            },
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Лабіринти київських вод</h2><a href='https://www.google.com' target='_blank'><img class='omg' src='img/rivers.jpg'/></a>");
+            },
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Вони стежать за тобою.І ти цього хочеш</h2><a href='http://texty.org.ua/d/cell_towers/' target='_blank'><img class='omg' src='img/towel.jpg'/></a>");
+            },
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Лабіринти київських вод</h2><a href='https://www.google.com' target='_blank'><img class='omg' src='img/rivers.jpg'/></a>");
+            },
+            function(event) {
+                $('.chart').html("<h2 style='position:absolute; background-color: rgba(81, 86, 97, 0.8); padding-left:15px; margin-left: 0!important; font-size: 3rem; '>Вони стежать за тобою.І ти цього хочеш</h2><a href='http://texty.org.ua/d/cell_towers/' target='_blank'><img class='omg' src='img/towel.jpg'/></a>");
+            }
+        ]
+    });
+    // ts.goTo(0);
+</script>
 
 </body>
 </html>
