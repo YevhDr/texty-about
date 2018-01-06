@@ -484,7 +484,6 @@ h2 {
 
 .narrative-item {
   min-height: 300px;
-  color: #ccc;
   transition: color 200ms;
   padding-right: 10px;
   font-size: 20px;
@@ -498,7 +497,6 @@ h2 {
 
 .chart {
   width: 50vw;
-  background: #e4e4e4;
   box-sizing: border-box; }
 
 @media screen and (max-width: 600px) {
@@ -510,6 +508,6 @@ h2 {
     font-size: 16px;
     padding: 8px; } }
 .omg {
-  width: 100% !important; }
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

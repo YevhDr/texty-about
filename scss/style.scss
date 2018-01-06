@@ -250,7 +250,7 @@ section {
 }
 .narrative-item {
   min-height: 300px;
-  color: #ccc;
+  //color: #ccc;
   transition: color 200ms;
   padding-right: 10px;
   font-size: 20px;
@@ -266,7 +266,7 @@ section {
 .chart {
   //display: flex;
   width: 50vw;
-  background: rgb(228, 228, 228);
+  //background: rgb(228, 228, 228);
   box-sizing: border-box;
   //text-align: center;
   //font-size: 30px;
@@ -283,6 +283,8 @@ section {
 }
 
 .omg {
-  width: 100%!important;
+  width: 100%;
 
 }
+
+
